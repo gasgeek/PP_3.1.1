@@ -7,7 +7,7 @@
 <body>
 <h2>Add user</h2>
 <div>
-    <form th:action="@{/users/add}" th:object="${user}" method="post">
+    <form th:action="@{/addUser}" th:object="${user}" method="post">
         <fieldset>
             <legend>User data</legend>
             <p>
@@ -34,7 +34,7 @@
     </form>
     <br/>
     <form th:action="@{/}">
-        <button type="submit" class="btn btn-outline-danger">Back to users list</button>
+        <button type="submit" class="btn btn-outline-danger">Back to user list</button>
     </form>
 </div>
 </body>

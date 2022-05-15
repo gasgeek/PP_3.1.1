@@ -4,18 +4,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Users list</title>
+    <title>User list</title>
 </head>
 <body>
-<h2>Users list</h2>
+<h2>User list</h2>
 <div>
     <table>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Lastname</th>
-            <th>Email</th>
-        </tr>
 
         <tr th:each="user : ${users}">
             <td th:text="${user.getId()}">ID</td>
@@ -24,7 +18,7 @@
             <td th:text="${user.getEmail()}">Email</td>
 
             <td>
-                <form th:action="@{users/edit/{id}(id=${user.id})}" th:object="${user}">
+                <form th:action="@{users/editUser/{id}(id=${user.id})}" th:object="${user}">
                     <button type="submit">Edit</button>
                 </form>
             </td>
@@ -36,7 +30,7 @@
             </td>
         </tr>
     </table>
-    <form th:action="@{users/add}">
+    <form th:action="@{users/addUser}">
         <button type="submit">Add new user</button>
     </form>
 </div>

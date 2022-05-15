@@ -8,7 +8,7 @@
 <h2>Edit user</h2>
 <div>
 
-    <form th:action="@{/users/edit}" th:object="${user}" method="post">
+    <form th:action="@{/editUser}" th:object="${user}" method="post">
         <input type="hidden" name="id" th:value="${user.getId()}">
         <fieldset>
             <legend>User data</legend>
@@ -30,6 +30,8 @@
                     <input type="text" name="email" th:id="email" th:value="${user.getEmail()}">
                 </label><br/>
             <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+            <br>
+            <br>
         </fieldset>
         <button type="submit">Update</button>
     </form>
@@ -37,7 +39,7 @@
 
     <br/>
     <form th:action="@{/}">
-        <button type="submit">Back to users list</button>
+        <button type="submit">Back to user list</button>
     </form>
 </div>
 </body>
