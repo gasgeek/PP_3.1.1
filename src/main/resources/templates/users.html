@@ -18,7 +18,7 @@
             <td th:text="${user.getEmail()}">Email</td>
 
             <td>
-                <form th:action="@{users/editUser/{id}(id=${user.id})}" th:object="${user}">
+                <form th:action="@{users/edit/{id}(id=${user.id})}" th:object="${user}">
                     <button type="submit">Edit</button>
                 </form>
             </td>
@@ -30,7 +30,8 @@
             </td>
         </tr>
     </table>
-    <form th:action="@{users/addUser}">
+    <form th:action="@{/users/add}">
+
         <button type="submit">Add new user</button>
     </form>
 </div>

@@ -1,4 +1,4 @@
-package PP_3_1_1_CRUD.config;
+package PP_3_1_1_CRUD;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

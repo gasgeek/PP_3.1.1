@@ -13,7 +13,7 @@
             <td th:text="${user.getLastName()}">Lastname</td>
             <td th:text="${user.getEmail()}">Email</td>
             <td>
-                <form th:action="@{users/editUser/{id}(id=${user.id})}" th:object="${user}">
+                <form th:action="@{users/edit/{id}(id=${user.id})}" th:object="${user}">
                     <button type="submit">Edit</button>
                 </form>
             </td>
